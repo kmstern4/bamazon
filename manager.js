@@ -93,8 +93,9 @@ function addProduct() {
             message: "What product would you like to add?",
             name: "product"
         }, {
-            type: "input",
-            message: "What department would you like to add this product to?",
+            type: "list",
+            message: "Wich department would you like to add this product to?",
+            choices: ["Clothing", "Decorations", "Food", "Miscellaneous"],
             name: "department"
         }, {
             type: "input",
