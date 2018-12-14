@@ -61,7 +61,8 @@ function purchase() {
         connection.query("SELECT * FROM products WHERE product = ?", [answer.product], function(err, res) {
             if (err) throw err;
             if (parseInt(answer.amount) > parseInt(res[0].stock)) {
-                return console.log("Insufficient Stock!");
+                console.log("Insufficient Stock!");
+                return purchase();
             }
             var total = res[0].price * parseInt(answer.amount);
             var remain = res[0].stock - parseInt(answer.amount);
