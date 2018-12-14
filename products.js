@@ -3,8 +3,7 @@ function Product(id, product, department, price, stock, sales) {
     this.product = product,
     this.department = department,
     this.price = price,
-    this.stock = stock,
-    this.sales = sales
+    this.stock = stock
 }
 
 module.exports = Product;
