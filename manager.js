@@ -24,7 +24,7 @@ function viewProducts(callback) {
     connection.query("SELECT * FROM products", function(err, res) {
         if (err) throw err;
         for (var i=0; i < res.length; i++) {
-            var addProduct = new Product(res[i].id, res[i].product, res[i].department, res[i].price, res[i].stock);
+            var addProduct = new Product(res[i].id, res[i].product, res[i].department, res[i].price, res[i].stock, res[i].sales);
             productArr.push(addProduct);
             productNameArr.push(res[i].product);
         }
