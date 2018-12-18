@@ -12,5 +12,6 @@ The manager level uses the same table of information from the MySQL database as 
 
 ### Supervisor Level
 The supervisor level uses the same Products table from the same MySQL database used in the previous levels, and also uses a table called Departments, containing 3 columns: department ID, department name, and overhead. Choosing to view sales by department will bring up a table created from joining the Departments table and the Products table. The total sales column is calculated by adding up the total sales from items in the same department on the Products table. The total profit column is calculated by subtracting the overhead column from the total sales column.
+(Note: There is a "sales" column on the Products table that is not visible in the tables created in Bash for the customer or manager levels. This is the column used to create the total sales column on the joined table.)
 
 ![Supervisor Bamazon Gif](assets/supervisor.gif)
