@@ -67,7 +67,6 @@ function purchase() {
             var total = res[0].price * parseInt(answer.amount);
             var remain = res[0].stock - parseInt(answer.amount);
             var newSales = res[0].sales + total;
-            console.log(newSales);
             console.log(`Your total comes to $${total.toFixed(2)}. Thank you for your purchase!`);
             connection.query("UPDATE products SET stock = ?, sales = ? WHERE product = ?", [remain, newSales, answer.product], function(err, res) {
                 if (err) throw err;
